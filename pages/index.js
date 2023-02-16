@@ -14,7 +14,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ animal: animalInput }),
+        body: JSON.stringify({ question: animalInput }),
       });
 
       const data = await response.json();
@@ -44,7 +44,7 @@ export default function Home() {
         <form onSubmit={onSubmit}>
           <input
             type="text"
-            name="animal"
+            name="question"
             placeholder=""
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
